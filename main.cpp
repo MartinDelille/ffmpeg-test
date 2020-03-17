@@ -22,18 +22,6 @@ extern "C" {
 #endif
 using namespace std;
 
-class Pouet {
-	string _name;
-
-public:
-	Pouet(string name) : _name(name) {
-	}
-
-	void mange() {
-		cout << _name << " mange" << endl;
-	}
-};
-
 int main(int argc,
          char *argv[]) {
     if (argc < 2) {
@@ -43,6 +31,5 @@ int main(int argc,
 
     AVFormatContext *_formatContext;
     int error = avformat_open_input(&_formatContext, argv[1], nullptr, nullptr);
-    Pouet p("Martin");
-	p.mange();
+    cout << error;
 }
